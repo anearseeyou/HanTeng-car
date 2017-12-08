@@ -1,0 +1,1100 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td,select,option,button {
+    margin: 0;
+    padding: 0;
+    font: 14px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;
+    color: #2c2c2c;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+img{
+	display: block;
+	border: 0;
+}
+a{
+	text-decoration: none;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+	display: inline-block;
+	width: 100px;
+	text-align: left;
+	position: relative;left: 20px;
+}
+
+#outer-cont {
+    position: relative;
+    width: 100%;
+    top: 150px;
+    margin-bottom: 30px;
+}
+#inner-cont {
+    position: absolute;
+    width: 100%;
+    top: 173px;
+}
+#outer {
+    width : 310px;
+    max-width: 310px;
+    height: 310px;
+    margin: 0 auto;
+}
+#inner {
+    width : 112px;
+    max-width: 112px;
+    height: 142px;
+    margin: 0 auto;
+}
+#outer img, #inner img {
+    display: block;
+    margin: 0 auto;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+#outer img{
+	transform:rotate(30deg);
+	-ms-transform:rotate(30deg); 	/* IE 9 */
+	-moz-transform:rotate(30deg); 	/* Firefox */
+	-webkit-transform:rotate(30deg); /* Safari 和 Chrome */
+	-o-transform:rotate(30deg); 	/* Opera */
+}
+#inner img {
+	width: 73px;
+	height: 170px;
+}
+.cover{
+    width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+.cover img{
+    width: 320px;
+}
+#scratchpad,#prize{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    top: 140px;
+    left: 105px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    color:#333;
+}
+.btn-cont{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    display: none;
+}
+.content {
+    margin:0px 0 15px 0;
+}
+.banner {
+    text-align:center;
+}
+.main img {
+    max-width: 100%;
+    border: 0 none;
+}
+
+.activity-lottery-winning{
+	width: 100%;
+	height: 100%;
+	background: url(../images/di_tu.jpg) no-repeat;
+	background-size: 100% 110%;
+}
+#index_top{
+	position: absolute;top: 0;
+	position: relative;
+}
+#index_h3{
+	position: absolute;top: 80px;
+	width: 100%;
+	text-align: center;
+	color: #FFFC00;
+	font-weight: 900;
+}
+#index_h3 em{
+	text-shadow: 2px 2px 2px #222;
+	letter-spacing:2px
+}
+#index_h3 .em1{
+	font-size: 18px;
+}
+#index_h3 .em2{
+	font-size: 22px;
+}
+#index_h3 .em3{
+	font-size: 16px;
+}
+.indexImg1{
+	width: 100px;
+	position: absolute;left: 20px;top: 20px;
+}
+#indexImg2{
+	width: 200px;
+	position: absolute;right: 20px;top: 20px;
+}
+
+.car{
+	width: 280px;
+	position: absolute;left: 50%;
+	margin-top: 110px;
+	margin-left: -110px;
+}
+.subBtn{
+	width: 180px;
+	height: 45px;
+	background: url(../images/an_niu.png) no-repeat;
+	position: absolute;left: 50%;
+	margin-top: 250px;
+	margin-left: -90px;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	font-weight: 900;
+	text-shadow: 0 3px 3px red;
+	font-family: "宋体";
+}
+.knowHT{
+	width: 70px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	border-bottom: 1px solid #C5908E;
+	position: absolute;right: 10px;
+	margin-top: 258px;
+	opacity:0.9;
+	line-height: 1.3;
+}
+.mantle{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.4;
+	z-index: 9;
+}
+.subSuc,.answerWrong{                      /*  ............*/
+	width: 250px;
+	height: 250px;
+	background: #fff;
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -125px;
+	margin-top: -150px;	
+	z-index: 99;
+}
+.subSuc .img1,.answerWrong .img1{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+.subSuc .img2{
+	width: 180px;
+	margin: 0 auto;
+	position: relative;top: 20px;
+}
+.subSuc h3,.answerWrong h3{
+	font-size: 22px;
+	color: #2c2c2c;
+	float: left;
+	margin-top: 33px;
+}
+.subSuc button,.answerWrong button{
+	width: 140px;
+	height: 45px;
+	border: 0;
+	background: 0;
+	background: #FB5000;
+	border-radius: 25px;
+	position: relative;top: 45px;left: 55px;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 45px;
+	font-family: "黑体";
+	outline: 0;
+	box-shadow: 3px 3px 5px #aaa;
+}
+.answer{
+	width: 320px;
+	height: 430px;
+	background: #F5F5F5;
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -160px;
+	margin-top: -250px;
+	overflow: hidden;
+}
+.answer .img3{
+	position: absolute;right: 0;bottom: 0;
+	opacity: 0.3;
+}
+.answer .img4{
+	width: 360px;
+	margin-top: 20px;
+	margin-left: -30px;
+	margin-bottom: 20px;
+}
+.answer div{
+	margin-bottom: 30px;
+}
+.answer div span{
+	font-size: 14px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.answer select{
+	width: 125px;
+	float: right;
+	position: relative;right: 20px;
+	border: 0;
+	border: 1px solid #d1d1d1;
+	color: #2C2C2C;
+}
+.answer select option{
+	font-size: 12px;
+}
+.answer button,.subPrize button{
+	width: 140px;
+	height: 45px;
+	border: 0;
+	background: 0;
+	background: #FB5000;
+	border-radius: 25px;
+	position: relative;top: 0px;left: 90px;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 45px;
+	font-family: "黑体";
+	outline: 0;
+	box-shadow: 3px 3px 5px #aaa;
+}
+.subPrize{
+	width: 320px;
+	height: 500px;
+	background: #F5F5F5;
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -160px;
+	margin-top: -250px;
+	overflow: hidden;
+}
+.subPrize .img5{
+	width: 300px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.subPrize p{
+	text-align: center;
+	color: #FA2F04;
+	font-size: 18px;
+}
+.subPrize div{
+	text-align: center;
+	margin-bottom: 15px;
+}
+.subPrize div span{
+	display: inline-block;
+	width: 85px;
+	text-align: left;
+}
+.subPrize div input{
+	display: inline-block;
+	width: 130px;
+}
+.marT{
+	margin-top: 20px;
+}
+.jianju{
+	letter-spacing:28px;
+}
+.subPrize button{
+	position: relative;top: 5px;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	background: url(../images/zhuan_fa.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.bg button,.bgPrize button{
+	width: 180px;
+	height: 45px;
+	background: url(../images/an_niu.png) no-repeat;
+	position: absolute;left: 50%;bottom: 20px;
+	margin-left: -90px;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	font-weight: 900;
+	text-shadow: 0 3px 3px red;
+	font-family: "宋体";
+	border: 0;
+	outline: 0;
+}
+.bgPrize{
+	width: 100%;
+	height: 100%;
+	background: url(../images/di_tu_prize.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.bgPrize h2{
+	font-size: 38px;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+	position: relative;top: 220px;
+}
+.bgPrize h3{
+	font-size: 26px;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+	position: relative;top: 220px;
+}
+.bgPrize h5{
+	font-size: 15px;
+	text-align: center;
+	position: relative;top: 230px;
+	color: #fff;
+	opacity: 0.5;
+}
+.bgPrize .img_1000{
+	width: 220px;
+	margin: 0 auto;
+	position: relative;top: 45%;
+}
+.bgPrize .img_hongbao{
+	width: 240px;
+	margin: 0 auto;
+	position: relative;top: 43%;
+}
+.bgPrize .img_pro{
+	width: 240px;
+	margin: 0 auto;
+	position: relative;top: 45%;left: 20px;
+}
+.bgPrize .img_7plus{
+	width: 130px;
+	margin: 0 auto;
+	position: relative;top: 35%;
+}
+.bgPrize .img_7{
+	width: 160px;
+	margin: 0 auto;
+	position: relative;top: 38%;
+}
+.bgPrize .img_pad{
+	width: 150px;
+	margin: 0 auto;
+	position: relative;top: 38%;
+}
+.ask{
+	width: 100%;
+	min-height: 100%;
+	background: url(../images/ask.png) no-repeat;
+	background-size: cover;
+}
+.askTop{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+}
+.askTopimg1{
+	float: left;
+	position: relative;left: 35px;top: 17px;
+}
+.askTopimg2{
+	float: right;
+	position: relative;right: 35px;top: 17px;
+}
+.askCont{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.askContBtn{
+	margin: 0 auto;
+	text-align: center;
+}
+.askContBtn button{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	margin: 0 7px;
+	border: 0;
+	background: 0;
+	outline: 0;
+}
+.askContBtn .askContBtn1{
+	background: #3D3D3D;
+	box-shadow:inset 0 0 3px #666;  
+	border: 1px solid #000;
+	color: #fff;
+}
+.askContBtn .askContBtn2{
+	border: 1px solid #fff;
+	box-shadow:inset 0 0 3px #ccc;  
+	color: #000;
+}
+.askB{
+	margin-top: 10px;
+}
+.askB div{
+	width: 100%;
+	height: 36px;
+	padding: 0 35px;
+	box-sizing: border-box;
+	line-height: 36px;
+}
+.askB .bg_bai{
+	background: #E6E6E8;
+}
+.askB div h4{
+	font-size: 16px;
+	text-align: center;
+	line-height: 36px;
+	font-weight: 900;
+}
+.askB div img{
+	width: 110px;
+	float: right;
+	position: relative;left: 30px;top: 12px;
+}
+.askB div span{
+	font-size: 13px;
+}
+
+
+
+
+.answerWrong a{                      /*........*/
+	clear: both;
+	color: red;
+	padding-bottom: 3px;
+	font-size: 15px;
+	display: block;
+	text-align: center;
+	width: 140px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	position: relative;top: 25px;
+	border-bottom: 1px solid red;
+}
+
+.sorryBox{
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -140px;
+	margin-top: -100px;
+	z-index: 99;
+}
+.close{
+	width: 30px;
+	height: 30px;
+	position: absolute;top: 25px;right: 10px;
+}
+.askCont a{
+	display: block;
+	color: #EA2000;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 10px;
+	float: right;
+	text-align: center;
+	text-decoration: underline;
+	position: relative;left: 5px;
+}
+.listZJ{
+	width: 70px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-bottom: 1px solid #C5908E;
+    position: absolute;
+    left: 10px;
+    margin-top: 272px;
+    opacity: 0.9;
+}
+
+
+
+
+
+/*首页文字无缝滚动*/
+.swiper_wrap{
+	position: absolute;left: 50%;top: 555px;
+	margin-left: -120px;
+	width: 250px;
+	height: 30px;
+	overflow: hidden;
+}
+.font_inner{
+ 	font-size: 14px;
+ 	position: absolute;
+}
+.font_inner li{
+	line-height: 30px;
+	padding-left: 24px;
+}
+/*.lt{
+	position: absolute;
+	left: -1px;
+	top: 7px;
+	font-family: "宋体";
+	font-weight: bold;
+	color: #AAAAAA;
+}
+.gt{
+	position: absolute;
+	right: 26px;
+	top: 7px;
+	font-family: "宋体";
+	font-weight: bold;
+	color: #AAAAAA;
+	}*/
+.swiper_wrap .font_inner a{
+	color: #fff;
+	}
+/*.swiper_wrap a:hover{
+	color: #FA9101;
+}*/
+
+
+
+
+
+
+/*多行文字上下滚动*/
+.scrollDiv{
+	width:220px;
+	height:280px;
+	min-height:25px;
+	line-height:25px;
+	/*background: #FCE006;*/
+	background: url(../images/ming_dan.png) no-repeat;
+	background-size: cover;
+	position: absolute;left: 50%;top: 50%;
+	margin-left: -110px;
+	margin-top: -150px;
+	z-index: 9999;
+}
+/*.scrollDiv h3{
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 900;
+}*/
+.scrollDiv p{
+	position: relative;top: 110px;
+}
+.scrollDiv p span{
+	font-size: 16px;
+}
+.scrollDiv span{
+	display: block;
+	width: 50%;
+	text-align: center;
+	float: left;
+	color: #fff;
+}
+.mulitline{
+	width:220px;
+	height:120px;
+	overflow:hidden;
+	position: relative;top: 120px;
+}
+.scrollDiv li{
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	list-style: none;
+}
+#guize{
+	position: absolute;right: 20px;top: 90px;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: underline;
+	opacity: 0.8;
+}
+#guizeCont{
+	width: 320px;
+	height: 460px;
+	background: #fff;
+	border-radius: 10px;
+	position: absolute;left: 50%;top: 80px;
+	margin-left: -160px;
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 9999;
+	overflow-y: scroll;
+}
+#guizeCont p{
+	margin-bottom: 8px;
+}
+.tit{
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+/*scroll*/
+.scroll{margin:0px auto;position: relative;}
+.scroll_box{overflow:hidden;visibility:hidden;position:relative;}
+.scroll_wrap{overflow:hidden; position:relative;}
+.scroll_wrap li{position:relative;display:block;width:100%;float:left;}
+.scroll_wrap li a{display:block;margin:0 auto;position:relative;}
+.scroll_position{position:absolute;left:45%;bottom:0px;z-index:400px;}
+.scroll_position li{display:inline-block;width:10px;height:10px;border-radius:10px;background:#fff;}
+.scroll_position li a{font-size:0;}
+.scroll_position li.on{background-color:#9E9EA0;}
+
+
+
+
+@media screen and (min-width: 414px) { 
+	.swiper_wrap{
+		position: absolute;left: 50%;top: 590px;
+	}
+    #outer-cont {
+	    position: relative;top: 170px;
+	}
+	#inner-cont {
+	    position: absolute;top: 193px;
+	}
+	.car{margin-top: 130px;
+	}
+	.subBtn{
+		margin-top: 290px;
+	}
+	.knowHT{
+		margin-top: 298px;
+	}
+	.askCont {
+    	margin-top: 30px;
+	}
+	.askB {
+	    margin-top: 30px;
+	}
+	.bgPrize .img_hongbao {
+	    /*width: 220px;*/
+	    position: relative;
+	    top: 45%;
+	}
+	.bgPrize h2{
+		position: relative;top: 250px;
+	}
+	.bgPrize h3{
+		position: relative;top: 250px;
+	}
+	.listZJ{
+	    margin-top: 311px;
+	}
+	.bgPrize h5{
+		position: relative;top: 260px;
+	}
+}
+@media screen and (min-width: 320px) and (max-width : 374px){ 
+	.swiper_wrap{
+		position: absolute;left: 50%;top: 480px;
+	}
+    #outer-cont {
+	    position: relative;top: 110px;
+	}
+	#inner img {
+		width: 65px;
+		height: 150px;
+	}
+	#inner-cont {
+	    position: absolute;top: 146px;
+	}
+	.car{
+		margin-top: 50px;
+		width: 250px;
+		margin-left: -100px;
+	}
+	.subBtn{
+		margin-top: 170px;
+		width: 162px
+		height: 40.5px;
+		background-size:90%;
+		text-indent: -20px;
+		line-height: 38px;
+		font-size: 20px;
+		margin-left: -81px;
+	}
+	.knowHT{
+		margin-top: 178px;
+		position: absolute;right: 5px;
+		width: 60px;
+		font-size: 12px;
+	}
+	.askContBtn button {
+	    width: 100px;
+	    height: 35px;
+	}
+	.askB div {
+	    width: 100%;
+	    height: 30px;
+	    padding: 0 15px;
+	    box-sizing: border-box;
+	    line-height: 30px;
+	}
+	.askB div h4 {
+	    font-size: 15px;
+	    text-align: center;
+	    line-height: 30px;
+	}
+	.askB div img {
+	    width: 90px;
+	    float: right;
+	    position: relative;
+	    left: 10px;
+	    top: 9px;
+	}
+	.askTopimg1{
+		width: 100px;
+		position: relative;left: 25px;
+	}
+	.askTopimg2{
+		width: 120px;
+		position: relative;right: 25px;
+	}
+	.bgPrize button{
+		position: absolute;
+	    bottom: 15px;
+	}
+	.bgPrize .img_7plus {
+	    width: 110px;
+	    position: relative;
+	    top: 37%;
+	}
+	.bgPrize .img_hongbao {
+	    width: 210px;
+	    position: relative;
+	    top: 40%;
+	}
+	.bgPrize .img_pad {
+	    width: 120px;
+	    position: relative;
+	    top: 38%;
+	}
+	.bgPrize .img_pro {
+	    width: 200px;
+	    position: relative;
+	    top: 42%;
+	}
+	.bg button{
+		position: absolute;
+	    bottom: 15px;
+	}
+	
+	.answer {
+	    width: 280px;
+	    height: 400px;
+	    margin-left: -140px;
+	    margin-top: -200px;
+	}
+	.answer .img4 {
+	    width: 300px;
+	    margin-top: 5px;
+	    margin-left: -20px;
+	}
+	.answer div {
+	    margin-bottom: 20px;
+	}
+	.answer div span {
+	    font-size: 12px;
+	    padding-left: 5px;
+	}
+	.answer select {
+	    width: 125px;
+	    position: relative;
+	    right: 10px;
+	    border: 0;
+	    border: 1px solid #d1d1d1;
+	    font-size: 12px;
+	}
+	.answer select option{
+		font-size: 12px;
+	}
+	.answer button{
+		width: 120px;
+    	height: 35px;
+    	line-height: 35px;
+    	font-size: 16px;
+	}
+	
+	.subPrize{
+		width: 280px;
+	    height: 400px;
+	    margin-left: -140px;
+	    margin-top: -200px;
+	}
+	.subPrize .img5{
+		width: 250px;
+	    margin-left: 20px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	.subPrize p{
+		font-size: 16px;
+	}
+	.subPrize div{
+		margin-bottom: 10px;
+	}
+	.subPrize button{
+		width: 110px;
+   		height: 30px;
+   		font-size: 16px;
+   		line-height: 30px;
+   		position: relative;top: -2px;
+	}
+	.bgPrize h2{
+		font-size: 34px;
+		position: relative;top: 180px;
+	}
+	.bgPrize h3{
+		font-size: 22px;
+		position: relative;top: 180px;
+	}
+	.listZJ{
+		width: 60px;
+	    margin-top: 186px;
+	}
+	
+	#index_h3{
+		position: absolute;top: 58px;
+	}
+	#index_h3 .em1{
+		font-size: 16px;
+	}
+	#index_h3 .em2{
+		font-size: 20px;
+	}
+	#index_h3 .em3{
+		font-size: 14px;
+	}
+	.indexImg1{
+		width: 80px;
+		position: absolute;left: 20px;top: 15px;
+	}
+	#indexImg2{
+		width: 160px;
+		position: absolute;right: 20px;top: 15px;
+	}	
+	.bgPrize h5{
+		position: relative;top: 190px;
+	}
+	#guizeCont{
+		width: 280px;
+		margin-left: -140px;
+		top: 60px;
+	}
+}
+
+
+@media screen and (max-height: 480px) {
+	.subBtn{
+		/*display: none;*/
+	}
+	.knowHT{
+		margin-top: 0px;
+	}
+	#outer-cont {
+	    position: relative;top: 105px;
+	}
+	#inner-cont {
+	    position: absolute;top: 141px;
+	}
+	.car{
+		margin-top: 50px;
+	}
+	.knowHT{
+		margin-top: 179px;
+	}
+	html,body,.mantle{
+		height: 117%;
+	}
+	.askTopimg1{
+		width: 100px;
+		position: relative;left: 25px;
+	}
+	.askTopimg2{
+		width: 120px;
+		position: relative;right: 25px;
+	}
+	.bgPrize button{
+		position: absolute;
+	    bottom: -155px;
+	}
+	.bgPrize .img_7plus {
+	    width: 110px;
+	    position: relative;
+	    top: 37%;
+	}
+	.bgPrize .img_hongbao {
+	    width: 200px;
+	    position: relative;
+	    top: 40%;
+	}
+	.bgPrize .img_pad {
+	    width: 120px;
+	    position: relative;
+	    top: 38%;
+	}
+	.bgPrize .img_7 {
+	    width: 140px;
+	    position: relative;
+	    top: 38%;
+	}
+	.bgPrize .img_pro {
+	    width: 200px;
+	    position: relative;
+	    top: 40%;
+	}
+	.bg button{
+		position: absolute;
+	    bottom: -75px;
+	}
+	
+	.answer {
+	    width: 280px;
+	    height: 400px;
+	    margin-left: -140px;
+	    margin-top: -200px;
+	}
+	.answer .img4 {
+	    width: 300px;
+	    margin-top: 5px;
+	    margin-left: -20px;
+	}
+	.answer div {
+	    margin-bottom: 20px;
+	}
+	.answer div span {
+	    font-size: 12px;
+	    padding-left: 5px;
+	}
+	.answer select {
+	    width: 125px;
+	    position: relative;
+	    right: 10px;
+	    border: 0;
+	    border: 1px solid #d1d1d1;
+	    font-size: 12px;
+	}
+	.answer select option{
+		font-size: 12px;
+	}
+	.answer button{
+		width: 120px;
+    	height: 35px;
+    	line-height: 35px;
+    	font-size: 16px;
+	}
+	
+	.subPrize{
+		width: 280px;
+	    height: 400px;
+	    margin-left: -140px;
+	    margin-top: -200px;
+	}
+	.subPrize .img5{
+		width: 250px;
+	    margin-left: 20px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	.subPrize p{
+		font-size: 16px;
+	}
+	.subPrize div{
+		margin-bottom: 10px;
+	}
+	.subPrize button{
+		width: 110px;
+   		height: 30px;
+   		font-size: 16px;
+   		line-height: 30px;
+   		position: relative;top: -2px;
+	}
+	.swiper_wrap{
+		position: absolute;left: 50%;top: 480px;
+	}
+	.listZJ{
+		width: 60px;
+	    margin-top: 187px;
+	}
+	
+	#index_h3{
+		position: absolute;top: 58px;
+	}
+	#index_h3 .em1{
+		font-size: 16px;
+	}
+	#index_h3 .em2{
+		font-size: 20px;
+	}
+	#index_h3 .em3{
+		font-size: 14px;
+	}
+	.indexImg1{
+		width: 80px;
+		position: absolute;left: 20px;top: 15px;
+	}
+	#indexImg2{
+		width: 160px;
+		position: absolute;right: 20px;top: 15px;
+	}
+	.bgPrize h5{
+		position: relative;top: 190px;
+	}
+	#guizeCont{
+		width: 280px;
+		margin-left: -140px;
+		top: 60px;
+	}
+}
+#guan{
+	float: right;
+	margin-right: 5px;
+}
+
+#as{
+	position: absolute;
+	width:100%;
+	height: 100%;
+	z-index: 99999;
+	display: none;
+	background: #fff;
+}
+
+
+
+
