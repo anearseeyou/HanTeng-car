@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 弹性布局 -->
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<section class="lucky-wrapper">
+    <!-- 活动规则 -->
+    <div class="logo-wrap clearfix">
+        <h2 class="logo"></h2>
+        <span class="activity-rule">活动规则</span>
+    </div>
+    <!-- 查看规则 -->
+    <div class="lucky-rotate-rule">
+        <img src="../img/close.png" class="close-layer">
+    </div>
+    <!-- 标题 -->
+    <div class="lucky-title"></div>
+    <!-- 幸运抽奖 -->
+    <div class="lucky-rotate">
+        <div class="rotate-img">
+            <img src="../img/rotate.png" class="rotating">
+        </div>
+        <div class="lucky-pointer">
+            <img src="../img/lucky.png">
+        </div>
+    </div>
+    <!-- 中奖名单 -->
+    <div class="lucky-user">
+        <div class="lucky-list">
+            <p>中奖名单</p>
+            <p>恭喜131****6789获得景区门票1张</p>
+            <p>恭喜131****6789获得景区门票1张</p>
+            <p>恭喜131****6789获得景区门票1张</p>
+        </div>
+    </div>
+    <!-- 底部背景 -->
+    <div class="lucky-bottom">
+        <img class="activity-car" src="../img/car.png" alt="">
+    </div>
+    <!-- 遮罩 -->
+    <div class="lucky-layer"></div>
+    <!-- 抽到奖励弹框 -->
+    <div class="lucky-win-prize">
+        <img src="../img/close.png" class="close-layer">
+        <p class="win-prize">获得奖品</p>
+    </div>
+</section>
+
+</body>
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/jquery.rotate.js"></script>
+<script>
+    //抽奖代码
+    $(function () {
+        var rotate = $('.rotating');  // 旋转的转盘
+        var luckyTime = 4;            // 初始次数，由后台传入
+        var isExecute = 0;            // 是否正在抽奖
+        var luckyFn = function () {
+            var data = [1, 2, 3, 4, 5, 6];   // 抽奖
+            // data为随机出来的结果，根据概率后的结果
+            data = data[Math.floor(Math.random() * data.length)]; // 1~6的随机数
+            switch (data) {
+                case 1:
+                    rotateFn(1, 0, '景区门票');
+                    break;
+                case 2:
+                    rotateFn(2, 60, '谢谢参与');
+                    break;
+                case 3:
+                    rotateFn(3, 120, '户外餐椅套装');
+                    break;
+                case 4:
+                    rotateFn(4, 180, '车模');
+                    break;
+                case 5:
+                    rotateFn(5, 240, '水杯和雨伞');
+                    break;
+                case 6:
+                    rotateFn(6, 300, '红包');
+                    break;
+            }
+        }
+        // 点击开始抽奖
+        $(".lucky-pointer").click(function () {
+            var flag = true;
+            if (!flag) {
+                $(".lucky-layer").show();
+                $(".close-layer").on('click', function () {
+                    $(".lucky-layer").hide();
+                });
+            }
+            else {
+                $(".lucky-layer").hide()
+                if (isExecute) return;     // 如果在执行就退出
+                isExecute = true;          // 标志为 在执行
+                if (luckyTime <= 0) {      // 当抽奖次数为0的时候执行
+                    $(".lucky-layer").show();
+                    alert("抱歉!今日的机会已经用完");
+                    isExecute = false;
+                }
+                else {  // 还有次数就执行
+                    luckyTime = luckyTime - 1;  // 执行转盘了则次数减1
+                    if (luckyTime <= 0) {
+                        luckyTime = 0;
+                    }
+                    luckyFn();
+                }
+            }
+        });
+        var rotateFn = function (awards, angle, text) {
+            isExecute = true;
+            rotate.stopRotate();
+            rotate.rotate({
+                angle: 0,                // 旋转的角度数
+                duration: 4000,          // 旋转时间
+                animateTo: angle + 1440, // 给定的角度,让它根据得出来的结果加上1440度旋转
+                callback: function () {
+                    isExecute = false;   // 标志为 执行完毕
+                    $(".win-prize").html("恭喜您，已获得<br>" + text);
+                    $(".lucky-layer").show();
+                    $(".lucky-win-prize").show();
+                    $(".close-layer").on('click', function () {
+                        $(".lucky-layer").hide();
+                        $(".lucky-win-prize").hide();
+                    });
+                }
+            });
+        };
+    });
+</script>
+</html>

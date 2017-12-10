@@ -8,6 +8,8 @@ html {
   background: #ffffff;
   font-size: 12px;
   font-weight: 200;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'HelveticaNeue-Light', 'Arial', 'sans-serif';
 }
 .clearfix:after {
@@ -20,22 +22,13 @@ html {
   font-size: 0;
 }
 .header {
+  overflow: hidden;
   position: relative;
 }
 .header,
 .header .poster-img {
   width: 100%;
   height: 5.33333333rem;
-}
-.header .logo {
-  width: 1.64rem;
-  height: 1.16rem;
-  position: absolute;
-  top: 0;
-  left: 0.56rem;
-  text-indent: -999em;
-  background: url("../img/logo.png") no-repeat;
-  background-size: 100% 100%;
 }
 .header .logo-text {
   font-size: 0.53333333rem;
@@ -68,6 +61,16 @@ html {
 .header .activity .activity-in .activity-btn {
   font-size: 0.34666667rem;
   margin-left: 34px;
+}
+.logo {
+  width: 1.64rem;
+  height: 1.16rem;
+  position: absolute;
+  top: 0;
+  left: 0.56rem;
+  text-indent: -999em;
+  background: url("../img/logo.png") no-repeat;
+  background-size: 100% 100%;
 }
 .content {
   padding: 0.53rem 0.26rem 0.53rem 0.26rem;
@@ -232,4 +235,107 @@ html {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+.lucky-wrapper {
+  background: url("../img/lucky-bgc.png");
+}
+.lucky-wrapper .logo-wrap {
+  height: 1.16rem;
+  margin-bottom: 20px;
+}
+.lucky-wrapper .activity-rule {
+  width: 2rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  margin: 20px 30px 0 0;
+  float: right;
+  color: #4a5059;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #bdbdbf;
+}
+.lucky-wrapper .lucky-title {
+  width: 5.42666667rem;
+  height: 1.8rem;
+  margin: 0 auto;
+  background: url("../img/title.png") no-repeat;
+}
+.lucky-wrapper .lucky-user {
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.lucky-wrapper .lucky-user .lucky-list {
+  color: #5b5c60;
+  padding: 10px 30px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #9f9fa1;
+}
+.lucky-wrapper .lucky-rotate {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.lucky-wrapper .rotate-img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+.lucky-wrapper .rotate-img > img,
+.lucky-wrapper .lucky-pointer > img {
+  width: 100%;
+}
+.lucky-wrapper .lucky-pointer {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 25vw;
+  left: 35vw;
+}
+.lucky-wrapper .lucky-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 500;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.lucky-wrapper .lucky-rotate-rule,
+.lucky-wrapper .lucky-win-prize {
+  width: 80%;
+  height: auto;
+  position: fixed;
+  z-index: 600;
+  top: 22%;
+  left: 10%;
+  display: none;
+}
+.lucky-wrapper .close-layer {
+  width: 12%;
+  position: absolute;
+  z-index: 601;
+  top: -13vw;
+  right: -17px;
+}
+.lucky-wrapper .win-prize {
+  color: #fff;
+  font-size: 30px;
+}
+.lucky-wrapper .lucky-bottom {
+  width: 100%;
+  height: 3.78666667rem;
+  position: relative;
+  background: url("../img/lucky-bottom.png") no-repeat;
+}
+.lucky-wrapper .lucky-bottom .activity-car {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
 }
