@@ -1,25 +1,6 @@
 @charset "UTF-8";
 @import "mixin";
 
-body, html {
-  line-height: 1;
-  color: #424242;
-  background: #ffffff;
-  font-size: 12px;
-  font-weight: 200;
-  font-family: 'PingFang SC', 'STHeitiSC-Light', 'HelveticaNeue-Light', 'Arial', 'sans-serif';
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-  font-size: 0;
-}
-
 // 主页头部
 .header {
   overflow: hidden;
@@ -80,7 +61,7 @@ body, html {
     .height(220);
     padding: 0.26rem;
     .margin-bottom(10);
-    border-radius: 20px;
+    border-radius: 8px;
     border: 1px solid #c9c9c9;
     display: flex;
     .month-img {
@@ -88,26 +69,24 @@ body, html {
       & > img {
         .width(370);
         .height(220);
-        border-radius: 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 10px rgba(17, 17, 57, 0.2);
       }
     }
     .month-des {
       flex: 5;
       .padding-left(20);
-      .padding-top(40);
       position: relative;
-      .february {
-        .font-size(30);
-        font-weight: bolder;
+      color: #8c8c8c;
+      font-size: 28px;
+      & > p {
+        .margin-top(20);
+        & > span {
+          color: #333;
+        }
       }
-      .february-city {
-        .font-size(24);
-        font-weight: bolder;
-      }
-      .february-open {
-        .margin-top(10);
-        .font-size(22);
-        color: #8c8c8c;
+      .activity-open {
+        font-size: 22px;
       }
       .open-attractions {
         .width(140);
@@ -146,7 +125,7 @@ body, html {
       .width(400);
       text-align: center;
       font-size: 30px;
-      color: #424242;
+      color: #333;
       position: absolute;
       left: 50%;
       top: -20px;
@@ -245,6 +224,17 @@ body, html {
 // 抽奖页
 .lucky-wrapper {
   background: url("../img/lucky-bgc.png");
+  .close-btn {
+    width: 10%;
+    position: absolute;
+    z-index: 2000;
+    top: 230px;
+    right: 10vw;
+  }
+  .close-question {
+    top: -14vw;
+    right: 2vw;
+  }
   .logo-wrap {
     height: 1.16rem;
     margin-bottom: 20px;
@@ -260,6 +250,39 @@ body, html {
     text-align: center;
     border-radius: 10px;
     border: 1px solid #9f9fa1;
+  }
+  .lucky-rotate-rule {
+    .rule-des {
+      .width(623);
+      .height(598);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1001;
+      box-sizing: border-box;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background: url("../img/rule-bgc.png") no-repeat;
+    }
+    .rule-title {
+      .height(100);
+      .line-height(100);
+      font-size: 30px;
+      color: #4b5058;
+      text-align: center;
+    }
+    .rule-wrap {
+      padding: 0 60px;
+      line-height: 40px;
+      color: #333;
+    }
+    .rule-text {
+      font-size: 24px;
+    }
+
   }
   .lucky-title {
     .width(407);
@@ -312,24 +335,80 @@ body, html {
     top: 25vw;
     left: 35vw;
   }
-  .lucky-layer {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 500;
-    top: 0px;
-    background: rgba(0, 0, 0, 0.7);
+  .lucky-win-prize, .exceed-time {
     display: none;
+    .width(600);
+    .height(658);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .winner > span, .winner-text > p {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .winner > span {
+      width: 100%;
+      .height(120);
+      .margin-top(200);
+    }
+    .winner-text > p {
+      width: 100%;
+      .height(33);
+      .margin-top(40);
+    }
+    .win-text {
+      background-image: url("../img/win-text.png");
+    }
+    .sorry-text {
+      background-image: url("../img/sorry-text.png");
+    }
+    .win-ticket {
+      background-image: url("../img/win-ticket.png");
+    }
+    .win-redpackage {
+      background-image: url("../img/win-redpackage.png");
+    }
+    .win-glass {
+      background-image: url("../img/win-glass.png");
+    }
+    .win-carmodel {
+      background-image: url("../img/win-car-model.png");
+    }
+    .win-outdoors {
+      background-image: url("../img/win-outdoors.png");
+    }
+    .win-thanks {
+      background-image: url("../img/win-thanks.png");
+    }
+    .win-prize {
+      .height(90);
+      .line-height(90);
+      color: #7e93a7;
+      font-size: 30px;
+      text-align: center;
+    }
+    .share-btn, .again-btn, .none-time {
+      .width(420);
+      .height(70);
+      .line-height(70);
+      margin: 0 auto;
+      color: #182430;
+      font-size: 34px;
+      border-radius: 4px;
+      text-align: center;
+      background: #7e93a7;
+    }
   }
-  .lucky-rotate-rule,
   .lucky-win-prize {
-    width: 80%;
-    height: auto;
-    position: fixed;
-    z-index: 600;
-    top: 22%;
-    left: 10%;
-    display: none;
+    background-image: url("../img/win-bgc.png");
   }
   .close-layer {
     width: 12%;
@@ -350,9 +429,97 @@ body, html {
       height: 100%;
     }
   }
+  .lucky-layer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 500;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .question-layer {
+    .width(623);
+    .height(945);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2000;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url("../img/question-bgc.png") no-repeat;
+  }
+  .question-tilte {
+    .margin-top(50);
+    .margin-bottom(50);
+    font-size: 30px;
+    color: #6f8296;
+    text-align: center;
+    & > p {
+      .margin-top(12);
+    }
+  }
+  .question-list {
+    padding: 0 40px 0 60px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #333;
+    .tilte-color {
+      color: #838383;
+    }
+    & li {
+      .margin-bottom(30);
+      &:last-child {
+        .margin-bottom(10);
+      }
+    }
+    & span {
+      display: inline-block;
+    }
+  }
+  .only-choose {
+    .width(250);
+    .height(64);
+    .line-height(64);
+  }
+  .choose-icon {
+    .width(18);
+    .height(18);
+    .margin-right(20);
+    display: inline-block;
+    border: 1px solid #a8a9a9;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  .choose-bgc {
+    .choose-icon {
+      background-color: #3195ff;
+    }
+  }
+  .answer-one,
+  .answer-two,
+  .answer-three {
+    .margin-top(20);
+  }
+  .answer-three {
+    & span {
+      display: block;
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  .question-btn {
+    .width(260);
+    .height(64);
+    .line-height(64);
+    text-align: center;
+    font-size: 32px;
+    color: #1b242f;
+    margin: 0 auto;
+    background: #8293a5;
+    border-radius: 8px;
+  }
 }
-
-
-
-
-
