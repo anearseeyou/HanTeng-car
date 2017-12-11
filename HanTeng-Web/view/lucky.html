@@ -8,7 +8,7 @@
     <!-- 弹性布局 -->
     <script src="../lib/flexible.js"></script>
 </head>
-<body>
+<body style="overflow-x: hidden">
 <section class="lucky-wrapper">
     <!-- 活动规则 -->
     <div class="logo-wrap clearfix">
@@ -33,7 +33,7 @@
     <!-- 中奖名单 -->
     <div class="lucky-user">
         <div class="lucky-list">
-            <p>中奖名单</p>
+            <p class="lucky-name"></p>
             <p>恭喜131****6789获得景区门票1张</p>
             <p>恭喜131****6789获得景区门票1张</p>
             <p>恭喜131****6789获得景区门票1张</p>
@@ -41,7 +41,7 @@
     </div>
     <!-- 底部背景 -->
     <div class="lucky-bottom">
-        <img class="activity-car" src="../img/car.png" alt="">
+        <img class="activity-car" src="../img/lucky-car.png" alt="">
     </div>
     <!-- 遮罩 -->
     <div class="lucky-layer"></div>
@@ -61,6 +61,7 @@
         var rotate = $('.rotating');  // 旋转的转盘
         var luckyTime = 4;            // 初始次数，由后台传入
         var isExecute = 0;            // 是否正在抽奖
+
         var luckyFn = function () {
             var data = [1, 2, 3, 4, 5, 6];   // 抽奖
             // data为随机出来的结果，根据概率后的结果
@@ -86,6 +87,7 @@
                     break;
             }
         }
+
         // 点击开始抽奖
         $(".lucky-pointer").click(function () {
             var flag = true;
@@ -113,6 +115,13 @@
                 }
             }
         });
+
+        /**
+         * 旋转度数函数
+         * @param awards
+         * @param angle
+         * @param text
+         */
         var rotateFn = function (awards, angle, text) {
             isExecute = true;
             rotate.stopRotate();

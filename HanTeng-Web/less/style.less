@@ -7,8 +7,6 @@ body, html {
   background: #ffffff;
   font-size: 12px;
   font-weight: 200;
-  overflow-x: hidden;
-  overflow-y: auto;
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'HelveticaNeue-Light', 'Arial', 'sans-serif';
 }
 
@@ -261,7 +259,7 @@ body, html {
     font-size: 24px;
     text-align: center;
     border-radius: 10px;
-    border: 1px solid #bdbdbf;
+    border: 1px solid #9f9fa1;
   }
   .lucky-title {
     .width(407);
@@ -282,6 +280,13 @@ body, html {
       border-radius: 8px;
       border: 1px solid #9f9fa1;
 
+    }
+    .lucky-name {
+      .width(98);
+      .height(14);
+      margin: 0 auto;
+      margin-bottom: 5px;
+      background: url("../img/lucky-user.png") no-repeat;
     }
   }
   .lucky-rotate {
@@ -339,13 +344,10 @@ body, html {
   }
   .lucky-bottom {
     width: 100%;
-    .height(284);
-    position: relative;
-    background: url("../img/lucky-bottom.png") no-repeat;
-    .activity-car {
-      position: absolute;
-      right: 100px;
-      bottom: 0;
+    height: 272px;
+    & > img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
