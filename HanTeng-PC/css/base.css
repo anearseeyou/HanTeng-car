@@ -1,0 +1,130 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul {
+    list-style: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%
+}
+
+body, html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #ffffff;
+    font-size: 12px;
+    background: #ffffff;
+    overflow-x: hidden;
+    font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.gray-color {
+    color: #666;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.none {
+    display: none;
+}
+
+.pos-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.lucky-layer {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.close-layer {
+    width: 40px;
+    height: 40px;
+    background: url("../img/close.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -5px;
+    top: -60px;
+    z-index: 10;
+    cursor: pointer;
+}

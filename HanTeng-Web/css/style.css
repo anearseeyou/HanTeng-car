@@ -228,6 +228,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
 .lucky-wrapper {
   background: url("../img/lucky-bgc.png");
   background-size: 100% 100%;

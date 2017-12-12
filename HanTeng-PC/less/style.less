@@ -1,0 +1,520 @@
+// 头部内容
+.header {
+  .banner {
+    width: 100%;
+    height: 720px;
+  }
+  .logo {
+    width: 178px;
+    height: 123px;
+    position: absolute;
+    left: 70px;
+    top: 0;
+    text-indent: -9999em;
+    background: url("../img/logo.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .title {
+    width: 560px;
+    height: 176px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+    background: url("../img/title.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .activity-title {
+    width: 100%;
+    height: 90px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    .activity-city {
+      line-height: 90px;
+    }
+    .activity-in {
+      height: 50px;
+      line-height: 50px;
+      background: #ca1f26;
+      border-radius: 6px;
+      padding: 0 40px;
+      margin-top: 20px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+      &:after {
+        content: '';
+        width: 10px;
+        height: 14px;
+        background: url("../img/activity-gt.png") no-repeat center;
+        background-size: 8px 13px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -7px;
+      }
+    }
+  }
+}
+
+// 每月内容
+.container {
+  margin-top: 30px;
+  .scenery-wrap {
+    display: flex;
+    height: 190px;
+    margin-bottom: 30px;
+  }
+  .scenery-show {
+    flex: 1;
+    margin-right: 30px;
+    position: relative;
+    & > img {
+      width: 277px;
+      height: 190px;
+    }
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+  .scenery-des {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+  }
+}
+
+// 游客风采
+.tourist {
+  margin-top: 30px;
+  .tourist-des {
+    font-size: 14px;
+    color: #022afb;
+  }
+  .tourist-info {
+    margin-top: 40px;
+    padding: 40px 20px;
+    line-height: 24px;
+    border: 1px solid #022afb;
+  }
+  .pos-text {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 40px;
+    font-size: 48px;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: -24px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  .tourist-list {
+    margin-top: 40px;
+  }
+  .tourist-title {
+    width: 150px;
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .upload-pic {
+    width: 150px;
+    height: 36px;
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+    line-height: 36px;
+    background: #c51d24;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    & > input {
+      height: 36px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+  .tourist-user {
+    color: #333;
+    margin-top: 20px;
+    & li {
+      display: flex;
+      margin-bottom: 30px;
+      .user-share {
+        flex: 5;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .user-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+        }
+        .user-name {
+          display: inline-block;
+          height: 60px;
+          line-height: 60px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .share-pic {
+      width: 395px;
+      margin-top: 10px;
+      margin-left: 70px;
+      & > img {
+        width: 395px;
+        height: 264px;
+      }
+      & > p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+// 转盘抽奖
+.lucky {
+  width: 100%;
+  background: url("../img/lucky-bgc.png") no-repeat;
+  background-size: 100% 100%;
+  .lucky-header {
+    height: 70px;
+  }
+  .lucky-logo {
+    width: 100px;
+    height: 70px;
+    left: 0;
+  }
+  .login {
+    color: #333;
+    margin-top: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    span {
+      display: inline-block;
+      line-height: 50px;
+    }
+    .login-name {
+      color: #666666;
+      margin-right: 10px;
+    }
+    .login-out {
+      cursor: pointer;
+    }
+  }
+  .lucky-title {
+    width: 746px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: url("../img/lucky-title.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .lucky-rotate {
+    margin: 80px 0;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    .rotate-img {
+      width: 568px;
+      height: 568px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .rotate-img > img {
+      width: 568px;
+      height: 568px;
+    }
+  }
+  .lucky-pointer > img {
+    width: 180px;
+    height: 217px;
+    cursor: pointer;
+  }
+  .lucky-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .lucky-rule {
+    display: flex;
+    .rule-list {
+      flex: 5;
+      margin-right: 60px;
+      padding: 30px 20px;
+      border: 1px solid #333;
+      font-size: 14px;
+      color: #333;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .rule-name, .lucky-name {
+      display: inline-block;
+      width: 170px;
+      height: 40px;
+      position: absolute;
+      left: 50%;
+      top: -20px;
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      background-color: #c2cbd5;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .rule-des {
+      line-height: 40px;
+    }
+    .rule-name {
+      background-image: url("../img/rule-text.png");
+      background-size: 146px 21px;
+    }
+    .lucky-name {
+      background-image: url("../img/lucky-list.png");
+      background-size: 146px 21px;
+    }
+    .lucky-list {
+      display: flex;
+      margin-bottom: 20px;
+      .username, .lucky-pirze {
+        flex: 3;
+      }
+      .lucky-date {
+        flex: 4;
+      }
+    }
+  }
+  .lucky-bottom {
+    width: 100%;
+    margin-top: 40px;
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .lucky-win-prize {
+    width: 500px;
+    height: 558px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    background-image: url("../img/win-bgc.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .winner > span, .winner-text > p {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .winner > span {
+      width: 100%;
+      height: 120px;
+      margin-top: 154px;
+    }
+    .winner-text > p {
+      width: 100%;
+      height: 33px;
+      margin-top: 40px;
+    }
+    .win-text {
+      background-image: url("../img/win-text.png");
+    }
+    .sorry-text {
+      background-image: url("../img/sorry-text.png");
+    }
+    .win-ticket {
+      background-image: url("../img/win-ticket.png");
+    }
+    .win-redpackage {
+      background-image: url("../img/win-redpackage.png");
+    }
+    .win-glass {
+      background-image: url("../img/win-glass.png");
+    }
+    .win-carmodel {
+      background-image: url("../img/win-car-model.png");
+    }
+    .win-outdoors {
+      background-image: url("../img/win-outdoors.png");
+    }
+    .win-thanks {
+      background-image: url("../img/win-thanks.png");
+    }
+    .win-prize {
+      height: 90px;
+      line-height: 90px;
+      color: #7e93a7;
+      font-size: 30px;
+      text-align: center;
+    }
+    .share-btn, .again-btn, .none-time {
+      width: 411px;
+      height: 70px;
+      line-height: 70px;
+      margin: 0 auto;
+      color: #182430;
+      font-size: 24px;
+      border-radius: 4px;
+      text-align: center;
+      background: #7e93a7;
+      cursor: pointer;
+    }
+  }
+}
+
+.login-code {
+  width: 400px;
+  height: 380px;
+  background: #8fa4b9;
+  z-index: 10;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.code-wrap {
+  width: 360px;
+  height: 340px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  img {
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+  }
+  p {
+    color: #333;
+    font-size: 18px;
+  }
+}
+
+.question-layer {
+  width: 400px;
+  height: 600px;
+  margin-left: -200px;
+  margin-top: -280px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2000;
+  background: url("../img/question-bgc.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.question-tilte {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #6f8296;
+  text-align: center;
+  & > p {
+    margin-top: 6px;
+  }
+}
+
+.question-list {
+  padding: 0 40px 0 60px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+  .tilte-color {
+    color: #838383;
+  }
+  & li {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+  & span {
+    display: inline-block;
+  }
+}
+
+.only-choose {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.choose-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #a8a9a9;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.choose-bgc {
+  .choose-icon {
+    border: none;
+    background-color: #3195ff;
+  }
+}
+
+.answer-one,
+.answer-two,
+.answer-three {
+  margin-top: 10px;
+}
+
+.answer-three {
+  & span {
+    display: block;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.question-btn {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #1b242f;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: #8293a5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-question {
+  right: 10px;
+}
