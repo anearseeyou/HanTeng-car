@@ -2,85 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>台历</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0">
+    <title>首页台历</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- 弹性布局 -->
     <script src="lib/flexible.js"></script>
 </head>
 <body>
+
 <!-- 顶部banner -->
 <section class="header">
     <h1 class="logo">汉腾汽车-看得见风景的车</h1>
     <a href="view/lucky.html">
         <img class="poster-img" src="img/change/poster.png" alt="看得见风景的车">
         <h2 class="logo-text">看得见风景的车</h2>
-        <div class="activity">
-            <div class="activity-text">January · 西藏 拉萨 纳木错</div>
-            <div class="activity-in">
+        <div class="activity clearfix">
+            <div class="activity-text fl">January · 西藏 拉萨 纳木错</div>
+            <div class="activity-in fr">
                 <span class="activity-btn">活动进行中</span>
             </div>
         </div>
     </a>
 </section>
+
 <!-- 内容区块 -->
 <section class="content">
     <ul class="content-list">
-        <li>
+        <li class="clearfix">
             <a href="view/scenery.html">
-                <div class="month-img">
+                <div class="month-img fl">
                     <img src="img/change/February.png">
                 </div>
-                <div class="month-des">
+                <div class="month-des fl">
                     <p class="">地点：<span>黑龙江</span></p>
                     <p class="">景点：<span>雪乡</span></p>
                     <p class="activity-open">2018-01-01开启活动</p>
-                    <span class="open-attractions">查看景点</span>
                 </div>
+                <span class="open-attractions">查看景点</span>
             </a>
         </li>
-        <li>
+        <li class="clearfix">
             <a href="view/scenery.html">
-                <div class="month-img">
+                <div class="month-img fl">
                     <img src="img/change/March.png">
                 </div>
-                <div class="month-des">
+                <div class="month-des fl">
                     <p class="">地点：<span>浙江</span></p>
                     <p class="">景点：<span>杭州</span></p>
                     <p class="activity-open">2018-02-01开启活动</p>
-                    <span class="open-attractions">查看景点</span>
                 </div>
+                <span class="open-attractions">查看景点</span>
             </a>
         </li>
-        <li>
+        <li class="clearfix">
             <a href="view/scenery.html">
-                <div class="month-img">
+                <div class="month-img fl">
                     <img src="img/change/April.png">
                 </div>
-                <div class="month-des">
+                <div class="month-des fl">
                     <p class="">地点：<span>安徽</span></p>
                     <p class="">景点：<span>宏村</span></p>
                     <p class="activity-open">2018-03-01开启活动</p>
-                    <span class="open-attractions">查看景点</span>
                 </div>
+                <span class="open-attractions">查看景点</span>
             </a>
         </li>
-        <li>
+        <li class="clearfix">
             <a href="view/scenery.html">
-                <div class="month-img">
+                <div class="month-img fl">
                     <img src="img/change/May.png">
                 </div>
-                <div class="month-des">
+                <div class="month-des fl">
                     <p class="">地点：<span>北京</span></p>
                     <p class="">景点：<span>故宫</span></p>
                     <p class="activity-open">2018-04-01开启活动</p>
-                    <span class="open-attractions">查看景点</span>
                 </div>
+                <span class="open-attractions">查看景点</span>
             </a>
         </li>
     </ul>
 </section>
+
 </body>
-<script src="lib/less.min.js"></script>
-<script src="lib/zepto.min.js"></script>
+
 </html>

@@ -8,10 +8,10 @@
 .header,
 .header .poster-img {
   width: 100%;
-  height: 5.33333333rem;
+  height: auto;
 }
 .header .logo-text {
-  font-size: 0.53333333rem;
+  font-size: 40px;
   color: #ffffff;
   position: absolute;
   right: 0.26666667rem;
@@ -21,8 +21,7 @@
   width: 100%;
   height: 1.06666667rem;
   line-height: 1.06666667rem;
-  font-size: 0.4rem;
-  display: flex;
+  font-size: 30px;
   color: #ffffff;
   position: absolute;
   bottom: 0;
@@ -30,17 +29,32 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .header .activity .activity-text {
-  flex: 7;
   margin-left: 0.26666667rem;
 }
 .header .activity .activity-in {
-  flex: 3;
-  margin-right: 0.26666667rem;
-  background: url("../img/activity.png") no-repeat center;
+  height: 80px;
 }
 .header .activity .activity-in .activity-btn {
-  font-size: 0.34666667rem;
-  margin-left: 34px;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  background: #b8312e;
+  box-shadow: 0 1px 5px #b8312e;
+  padding: 0 40px 0 20px;
+  position: relative;
+  border-radius: 6px;
+  margin-right: 0.26rem;
+}
+.header .activity .activity-in .activity-btn:after {
+  content: '';
+  width: 0.13333333rem;
+  height: 0.21333333rem;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -8px;
+  background: url("../img/activity-gt.png") no-repeat;
 }
 .logo {
   width: 1.64rem;
@@ -55,49 +69,45 @@
 .content {
   padding: 0.53rem 0.26rem 0.53rem 0.26rem;
 }
-.content .content-list a {
+.content .content-list li {
   height: 2.93333333rem;
   padding: 0.26rem;
   margin-bottom: 0.13333333rem;
   border-radius: 8px;
   border: 1px solid #c9c9c9;
-  display: flex;
+  position: relative;
 }
-.content .content-list a .month-img {
-  flex: 5;
-}
-.content .content-list a .month-img > img {
+.content .content-list li .month-img > img {
   width: 4.93333333rem;
   height: 2.93333333rem;
   border-radius: 8px;
   box-shadow: 0 1px 10px rgba(17, 17, 57, 0.2);
 }
-.content .content-list a .month-des {
-  flex: 5;
-  padding-left: 0.26666667rem;
+.content .content-list li .month-des {
+  padding-left: 20px;
   position: relative;
   color: #8c8c8c;
   font-size: 28px;
 }
-.content .content-list a .month-des > p {
+.content .content-list li .month-des > p {
   margin-top: 0.26666667rem;
 }
-.content .content-list a .month-des > p > span {
+.content .content-list li .month-des > p > span {
   color: #333;
 }
-.content .content-list a .month-des .activity-open {
+.content .content-list li .month-des .activity-open {
   font-size: 22px;
 }
-.content .content-list a .month-des .open-attractions {
+.content .content-list li .open-attractions {
   width: 1.86666667rem;
   height: 0.53333333rem;
   line-height: 0.53333333rem;
-  font-size: 0.26666667rem;
+  font-size: 20px;
   border-radius: 5px;
   text-align: center;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 0.26rem;
+  right: 0.26rem;
   color: #ffffff;
   background: #8b8b8b;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -119,15 +129,19 @@
   position: relative;
 }
 .scenery .activity-des .activity-title {
-  width: 5.33333333rem;
+  color: #333;
   text-align: center;
   font-size: 30px;
-  color: #333;
+  padding: 4px 24px;
+  background: #ffffff;
   position: absolute;
   left: 50%;
-  top: -20px;
+  top: -28px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  background: #ffffff;
 }
 .scenery .tourist {
   position: relative;
@@ -136,7 +150,7 @@
   width: 100%;
   height: 0.66666667rem;
   line-height: 0.66666667rem;
-  font-size: 0.53333333rem;
+  font-size: 36px;
   margin-top: 0.53333333rem;
   text-align: center;
   background: url("../img/custom.png") no-repeat center;
@@ -146,7 +160,7 @@
   width: 3.73333333rem;
   height: 0.66666667rem;
   line-height: 0.66666667rem;
-  font-size: 0.32rem;
+  font-size: 24px;
   margin: 0.26rem 0;
   color: #ffffff;
   text-align: center;
@@ -216,13 +230,15 @@
 }
 .lucky-wrapper {
   background: url("../img/lucky-bgc.png");
+  background-size: 100% 100%;
 }
 .lucky-wrapper .close-btn {
-  width: 10%;
+  width: 0.96rem;
+  height: 0.96rem;
   position: absolute;
+  top: -1.46666667rem;
+  right: 0.13333333rem;
   z-index: 2000;
-  top: 230px;
-  right: 10vw;
 }
 .lucky-wrapper .close-question {
   top: -14vw;
@@ -247,17 +263,15 @@
 .lucky-wrapper .lucky-rotate-rule .rule-des {
   width: 8.30666667rem;
   height: 7.97333333rem;
+  margin-left: -4.14666667rem;
+  margin-top: -3.98666667rem;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1001;
   box-sizing: border-box;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   background: url("../img/rule-bgc.png") no-repeat;
+  background-size: 100% 100%;
 }
 .lucky-wrapper .lucky-rotate-rule .rule-title {
   height: 1.33333333rem;
@@ -279,17 +293,18 @@
   height: 1.8rem;
   margin: 0 auto;
   background: url("../img/title.png") no-repeat;
+  background-size: 100% 100%;
 }
 .lucky-wrapper .lucky-user {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
 }
 .lucky-wrapper .lucky-user .lucky-list {
   color: #5b5c60;
   padding: 10px 30px;
-  line-height: 30px;
+  line-height: 34px;
   display: inline-block;
   border-radius: 8px;
   border: 1px solid #9f9fa1;
@@ -300,29 +315,33 @@
   margin: 0 auto;
   margin-bottom: 5px;
   background: url("../img/lucky-user.png") no-repeat;
+  background-size: 100% 100%;
 }
 .lucky-wrapper .lucky-rotate {
-  width: 100%;
   height: auto;
   position: relative;
+  box-sizing: border-box;
+  padding: 40px 0;
 }
 .lucky-wrapper .rotate-img {
-  width: 90%;
-  height: auto;
+  width: 7.57333333rem;
+  height: 7.57333333rem;
   margin: 0 auto;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
+  position: relative;
 }
-.lucky-wrapper .rotate-img > img,
+.lucky-wrapper .rotate-img > img {
+  width: 7.57333333rem;
+  height: 7.57333333rem;
+}
 .lucky-wrapper .lucky-pointer > img {
-  width: 100%;
+  width: 2.4rem;
+  height: 2.89333333rem;
 }
 .lucky-wrapper .lucky-pointer {
-  width: 30%;
-  height: auto;
   position: absolute;
-  top: 25vw;
-  left: 35vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .lucky-wrapper .lucky-win-prize,
 .lucky-wrapper .exceed-time {
@@ -418,6 +437,7 @@
 }
 .lucky-wrapper .lucky-win-prize {
   background-image: url("../img/win-bgc.png");
+  background-size: 100% 100%;
 }
 .lucky-wrapper .close-layer {
   width: 12%;
@@ -436,7 +456,7 @@
 }
 .lucky-wrapper .lucky-bottom > img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .lucky-wrapper .lucky-layer {
   display: none;
@@ -450,16 +470,14 @@
 .lucky-wrapper .question-layer {
   width: 8.30666667rem;
   height: 12.6rem;
+  margin-left: -4.14666667rem;
+  margin-top: -6.29333333rem;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 2000;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   background: url("../img/question-bgc.png") no-repeat;
+  background-size: 100% 100%;
 }
 .lucky-wrapper .question-tilte {
   margin-top: 0.66666667rem;
@@ -504,6 +522,7 @@
   box-sizing: border-box;
 }
 .lucky-wrapper .choose-bgc .choose-icon {
+  border: none;
   background-color: #3195ff;
 }
 .lucky-wrapper .answer-one,

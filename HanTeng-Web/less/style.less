@@ -7,10 +7,10 @@
   position: relative;
   &, .poster-img {
     width: 100%;
-    .height(400);
+    height: auto;
   }
   .logo-text {
-    .font-size(40);
+    font-size: 40px;
     color: #ffffff;
     position: absolute;
     .right(20);
@@ -20,24 +20,38 @@
     width: 100%;
     .height(80);
     .line-height(80);
-    .font-size(30);
-    display: flex;
+    font-size: 30px;
     color: #ffffff;
     position: absolute;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, .5);
     .activity-text {
-      flex: 7;
       .margin-left(20);
     }
     .activity-in {
-      flex: 3;
-      .margin-right(20);
-      background: url("../img/activity.png") no-repeat center;
+      height: 80px;
       .activity-btn {
-        .font-size(26);
-        margin-left: 34px;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        background: #b8312e;
+        box-shadow: 0 1px 5px #b8312e;
+        padding: 0 40px 0 20px;
+        position: relative;
+        border-radius: 6px;
+        margin-right: 0.26rem;
+        &:after {
+          content: '';
+          .width(10);
+          .height(16);
+          position: absolute;
+          top: 50%;
+          right: 16px;
+          margin-top: -8px;
+          background: url("../img/activity-gt.png") no-repeat;
+        }
       }
     }
   }
@@ -57,15 +71,22 @@
 // 主页内容
 .content {
   padding: 0.53rem 0.26rem 0.53rem 0.26rem;
-  .content-list a {
+  .content-list li {
     .height(220);
     padding: 0.26rem;
     .margin-bottom(10);
     border-radius: 8px;
     border: 1px solid #c9c9c9;
-    display: flex;
+    position: relative;
+    //display: -webkit-box;
+    //display: -webkit-flex;
+    //display: -ms-flexbox;
+    //display: flex;
     .month-img {
-      flex: 5;
+      //-webkit-box-flex: 5;
+      //-webkit-flex: 5;
+      //-ms-flex: 5;
+      //flex: 5;
       & > img {
         .width(370);
         .height(220);
@@ -74,8 +95,11 @@
       }
     }
     .month-des {
-      flex: 5;
-      .padding-left(20);
+      //-webkit-box-flex: 5;
+      //-webkit-flex: 5;
+      //-ms-flex: 5;
+      //flex: 5;
+      padding-left: 20px;
       position: relative;
       color: #8c8c8c;
       font-size: 28px;
@@ -88,21 +112,22 @@
       .activity-open {
         font-size: 22px;
       }
-      .open-attractions {
-        .width(140);
-        .height(40);
-        .line-height(40);
-        .font-size(20);
-        border-radius: 5px;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        color: #ffffff;
-        background: #8b8b8b;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .5)
-      }
+
+    }
+    .open-attractions {
+      .width(140);
+      .height(40);
+      .line-height(40);
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      position: absolute;
+      bottom: 0.26rem;
+      right: 0.26rem;
+      color: #ffffff;
+      background: #8b8b8b;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .5)
     }
   }
   .content-list li:last-child {
@@ -122,15 +147,19 @@
     border: 1px solid #b2b2b2;
     position: relative;
     .activity-title {
-      .width(400);
+      color: #333;
       text-align: center;
       font-size: 30px;
-      color: #333;
+      padding: 4px 24px;
+      background: #ffffff;
       position: absolute;
       left: 50%;
-      top: -20px;
+      top: -28px;
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
-      background: #ffffff;
     }
   }
   .tourist {
@@ -140,7 +169,7 @@
     width: 100%;
     .height(50);
     .line-height(50);
-    .font-size(40);
+    font-size: 36px;
     .margin-top(40);
     text-align: center;
     background: url("../img/custom.png") no-repeat center;
@@ -150,7 +179,7 @@
     .width(280);
     .height(50);
     .line-height(50);
-    .font-size(24);
+    font-size: 24px;
     margin: 0.26rem 0;
     color: #ffffff;
     text-align: center;
@@ -224,12 +253,14 @@
 // 抽奖页
 .lucky-wrapper {
   background: url("../img/lucky-bgc.png");
+  background-size: 100% 100%;
   .close-btn {
-    width: 10%;
+    .width(72);
+    .height(72);
     position: absolute;
+    .top(-110);
+    .right(10);
     z-index: 2000;
-    top: 230px;
-    right: 10vw;
   }
   .close-question {
     top: -14vw;
@@ -255,17 +286,15 @@
     .rule-des {
       .width(623);
       .height(598);
+      .margin-left(-311);
+      .margin-top(-299);
       position: absolute;
       left: 50%;
       top: 50%;
       z-index: 1001;
       box-sizing: border-box;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
       background: url("../img/rule-bgc.png") no-repeat;
+      background-size: 100% 100%;
     }
     .rule-title {
       .height(100);
@@ -289,20 +318,20 @@
     .height(135);
     margin: 0 auto;
     background: url("../img/title.png") no-repeat;
+    background-size: 100% 100%;
   }
   .lucky-user {
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
     .lucky-list {
       color: #5b5c60;
       padding: 10px 30px;
-      line-height: 30px;
+      line-height: 34px;
       display: inline-block;
       border-radius: 8px;
       border: 1px solid #9f9fa1;
-
     }
     .lucky-name {
       .width(98);
@@ -310,30 +339,34 @@
       margin: 0 auto;
       margin-bottom: 5px;
       background: url("../img/lucky-user.png") no-repeat;
+      background-size: 100% 100%;
     }
   }
   .lucky-rotate {
-    width: 100%;
     height: auto;
     position: relative;
+    box-sizing: border-box;
+    padding: 40px 0;
   }
   .rotate-img {
-    width: 90%;
-    height: auto;
+    .width(568);
+    .height(568);
     margin: 0 auto;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    position: relative;
   }
-  .rotate-img > img,
+  .rotate-img > img {
+    .width(568);
+    .height(568);
+  }
   .lucky-pointer > img {
-    width: 100%
+    .width(180);
+    .height(217);
   }
   .lucky-pointer {
-    width: 30%;
-    height: auto;
     position: absolute;
-    top: 25vw;
-    left: 35vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .lucky-win-prize, .exceed-time {
     display: none;
@@ -409,6 +442,7 @@
   }
   .lucky-win-prize {
     background-image: url("../img/win-bgc.png");
+    background-size: 100% 100%;
   }
   .close-layer {
     width: 12%;
@@ -426,7 +460,7 @@
     height: 272px;
     & > img {
       width: 100%;
-      height: 100%;
+      height: auto;
     }
   }
   .lucky-layer {
@@ -441,16 +475,14 @@
   .question-layer {
     .width(623);
     .height(945);
+    .margin-left(-311);
+    .margin-top(-472);
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 2000;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     background: url("../img/question-bgc.png") no-repeat;
+    background-size: 100% 100%;
   }
   .question-tilte {
     .margin-top(50);
@@ -496,6 +528,7 @@
   }
   .choose-bgc {
     .choose-icon {
+      border: none;
       background-color: #3195ff;
     }
   }
