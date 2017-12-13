@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0">
+    <title>抽奖页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 弹性布局 -->
+    <script src="../lib/flexible.js"></script>
+</head>
+<body style="overflow-x: hidden">
+
+<section class="lucky-wrapper">
+
+    <!-- 活动规则 -->
+    <div class="logo-wrap clearfix">
+        <h2 class="logo"></h2>
+        <span class="activity-rule">活动规则</span>
+    </div>
+
+    <!-- 查看规则 -->
+    <div class="lucky-rotate-rule none">
+        <div class="rule-des">
+            <p class="rule-title">活动规则</p>
+            <div class="rule-wrap">
+                <p class="rule-text">规则1:这是规则一</p>
+                <p class="rule-text">规则2:这是规则二</p>
+                <p class="rule-text">规则3:这是规则三</p>
+                <p class="rule-text">规则4:这是规则四</p>
+            </div>
+            <img class="close-btn" src="../img/close.png">
+        </div>
+
+    </div>
+
+    <!-- 标题 -->
+    <div class="lucky-title"></div>
+
+    <!-- 幸运抽奖 -->
+    <div class="lucky-rotate">
+        <div class="rotate-img">
+            <img src="../img/rotate.png" class="rotating">
+            <div class="lucky-pointer">
+                <img src="../img/lucky.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- 中奖名单 -->
+    <div class="lucky-user">
+        <div class="lucky-list">
+            <p class="lucky-name"></p>
+            <p>恭喜131****6789获得景区门票1张</p>
+            <p>恭喜131****6789获得景区门票1张</p>
+            <p>恭喜131****6789获得景区门票1张</p>
+        </div>
+    </div>
+
+    <!-- 底部背景 -->
+    <div class="lucky-bottom">
+        <img class="activity-car" src="../img/lucky-car.png" alt="">
+    </div>
+
+    <!-- 遮罩 -->
+    <div class="lucky-layer"></div>
+
+    <!-- 抽到奖励弹框 -->
+    <div class="lucky-win-prize">
+        <!-- 更换文字 -->
+        <div class="winner-text">
+            <p class=""></p>
+        </div>
+        <!-- 更换奖品&&文字 -->
+        <div class="winner">
+            <span class=""></span>
+        </div>
+        <p class="win-prize"></p>
+        <!-- 更换按钮文字 -->
+        <div class="win-btn">
+            <p class="share-btn">分享朋友圈后立即领取</p>
+            <p class="again-btn none">再抽一次</p>
+            <p class="none-time none">您的抽奖次数已用完</p>
+        </div>
+        <!-- 关闭按钮 -->
+        <div class="">
+            <img class="close-layer" src="../img/close.png">
+        </div>
+    </div>
+
+    <!-- 首次抽奖显示问答层 -->
+    <div class="question-layer none">
+        <div class="question-tilte">
+            <p>您只需回答几个问题</p>
+            <p>便可以轻松抽奖</p>
+        </div>
+        <div class="question-list">
+            <ul>
+                <li>
+                    <p class="tilte-color">1.以下哪个选项符合汉腾品牌描述？</p>
+                    <div class="answer-one choose-answer">
+                        <span class="only-choose flex5"><i class="choose-icon"></i>新梦想 新座驾</span>
+                        <span class="only-choose flex5"><i class="choose-icon"></i>看得见风景的车</span>
+                    </div>
+                </li>
+                <li>
+                    <p class="tilte-color">2.以下哪个选项是汉腾汽车车型？</p>
+                    <div class="answer-two choose-answer">
+                        <span class="only-choose"><i class="choose-icon"></i>X7</span>
+                        <span class="only-choose"><i class="choose-icon"></i>X5</span>
+                        <span class="only-choose"><i class="choose-icon"></i>X7S</span>
+                        <span class="only-choose"><i class="choose-icon"></i>X7 PHEV</span>
+                    </div>
+                </li>
+                <li>
+                    <p class="tilte-color">3.以下哪个选项符合汉腾汽车车型描述？</p>
+                    <div class="answer-three choose-answer">
+                        <span class="only-choose"><i class="choose-icon"></i>X7/X7S欧派大SUV</span>
+                        <span class="only-choose"><i class="choose-icon"></i>X5新生代 品智SUV</span>
+                        <span class="only-choose"><i class="choose-icon"></i>X7 PHEV 三擎四驱智能SUV</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="question-btn">提&nbsp;&nbsp;&nbsp;交</div>
+        <div><img class="close-btn close-question" src="../img/close.png"></div>
+    </div>
+
+</section>
+
+</body>
+
+
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/jquery.rotate.js"></script>
+<script src="../js/lucky.js"></script>
+<script>
+    $(function () {
+        // 活动规则
+        $('.activity-rule').on('click', function () {
+            $('.lucky-rotate-rule').show();
+            $('.lucky-layer').show();
+        });
+        $('.close-btn').on('click', function () {
+            $('.lucky-rotate-rule').hide();
+            $('.question-layer').hide();
+            $('.lucky-layer').hide();
+        });
+
+        // 问题选择
+        $('.choose-answer').on('click', '.only-choose', function () {
+            $(this).addClass('choose-bgc').siblings().removeClass('choose-bgc');
+        });
+    });
+</script>
+
+</html>
