@@ -63,35 +63,64 @@
             </div>
             <div class="rule-list relative">
                 <span class="lucky-name"></span>
-                <div class="lucky-list">
+                <div class="lucky-list lucky-head">
                     <span class="username gray-color">用户名</span>
                     <span class="lucky-date gray-color">中奖时间</span>
                     <span class="lucky-pirze gray-color">奖品</span>
                 </div>
-                <div class="lucky-list">
-                    <span class="username">137****4567</span>
-                    <span class="lucky-date">2018-01-12  19:56:45</span>
-                    <span class="lucky-pirze">杯子</span>
-                </div>
-                <div class="lucky-list">
-                    <span class="username">137****4567</span>
-                    <span class="lucky-date">2018-01-12  19:56:45</span>
-                    <span class="lucky-pirze">旅行套装</span>
-                </div>
-                <div class="lucky-list">
-                    <span class="username">137****4567</span>
-                    <span class="lucky-date">2018-01-12  19:56:45</span>
-                    <span class="lucky-pirze">旅行套装</span>
-                </div>
-                <div class="lucky-list">
-                    <span class="username">137****4567</span>
-                    <span class="lucky-date">2018-01-12  19:56:45</span>
-                    <span class="lucky-pirze">旅行套装</span>
-                </div>
-                <div class="lucky-list">
-                    <span class="username">137****4567</span>
-                    <span class="lucky-date">2018-01-12  19:56:45</span>
-                    <span class="lucky-pirze">旅行套装</span>
+                <div class="lucky-list-wrap">
+                    <ul class="scoll-list-wrap">
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">打伞</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">的年少弄</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">旅但无穷多无</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">的撒大无</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">大的</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">的撒大无</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">打到我</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">大叔大无</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">和是个好人</span>
+                        </li>
+                        <li class="lucky-list">
+                            <span class="username">137****4567</span>
+                            <span class="lucky-date">2018-01-12  19:56:45</span>
+                            <span class="lucky-pirze">公司的个</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -174,7 +203,23 @@
             $('.lucky-layer').hide();
             $('.question-layer').hide();
         });
+
+        // 中奖滚动
+        var scroll = setInterval('autoScroll(".lucky-list-wrap")', 1000);
+        $(".lucky-list-wrap").hover(function () {
+            clearInterval(scroll);
+        }, function () {
+            scroll = setInterval('autoScroll(".lucky-list-wrap")', 1000);
+        });
     });
+
+    function autoScroll(obj) {
+        $(obj).find("ul").animate({
+            marginTop: "-39px"
+        }, 1000, function () {
+            $(this).css({marginTop: "0px"}).find("li:first").appendTo(this);
+        })
+    }
 </script>
 </body>
 </html>
