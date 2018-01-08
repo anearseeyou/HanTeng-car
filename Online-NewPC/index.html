@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0">
+    <title>抽奖页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="lucky-wrapper">
+
+    <!-- 活动规则 -->
+    <div class="logo-wrap clearfix">
+        <h2 class="logo"></h2>
+        <span class="activity-rule">活动规则</span>
+    </div>
+
+    <!-- 查看规则 -->
+    <div class="lucky-rotate-rule none">
+        <div class="rule-des">
+            <p class="rule-title">活动规则</p>
+            <div class="rule-wrap">
+                <p class="rule-text">1. 用户第一次抽奖,需回答三个关于汉腾汽车的问题,回答完成后即可开始抽奖.</p>
+                <p class="rule-text">2. 每个用户有两次抽奖机会,分享朋友圈还可再获得两次抽奖机会</p>
+                <p class="rule-text">3. 抽中实物奖品的用户需要先分享到朋友圈,再提交收货人信息,即可领取奖品.</p>
+                <p class="rule-text">4. 抽中红包的用户需要先分享到朋友圈,再提交姓名,电话,所在城市后.红包会自动发送到微信账号.</p>
+                <p class="rule-text">5. 抽中实物的用户,再提交信息后.我工作人员会在10个工作日内联系您,确认收货地址.信息核对后,将后发送奖品.</p>
+                <p class="rule-text">6. 收到实物奖品的用户需要将奖品拍照分享到朋友圈.</p>
+            </div>
+            <img class="close-btn" src="img/close.png">
+        </div>
+
+    </div>
+
+    <!-- 标题 -->
+    <div class="lucky-title"></div>
+
+    <!-- 幸运抽奖 -->
+    <div class="lucky-rotate">
+        <div class="rotate-img">
+            <img src="img/lucky-rotate.png" class="rotating">
+            <div class="lucky-pointer">
+                <img src="img/pointer.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- 中奖名单 -->
+    <div class="lucky-user">
+        <div class="lucky-list">
+            <p class="lucky-name"></p>
+            <div class="lucky-list-wrap">
+                <ul>
+                    <li>恭喜131****6789获得景区门票01张</li>
+                    <li>恭喜131****6789获得景区门票02张</li>
+                    <li>恭喜131****6789获得景区门票03张</li>
+                    <li>恭喜131****6789获得景区门票04张</li>
+                    <li>恭喜131****6789获得景区门票05张</li>
+                    <li>恭喜131****6789获得景区门票06张</li>
+                    <li>恭喜131****6789获得景区门票07张</li>
+                    <li>恭喜131****6789获得景区门票08张</li>
+                    <li>恭喜131****6789获得景区门票09张</li>
+                    <li>恭喜131****6789获得景区门票10张</li>
+                    <li>恭喜131****6789获得景区门票11张</li>
+                    <li>恭喜131****6789获得景区门票12张</li>
+                    <li>恭喜131****6789获得景区门票13张</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部背景 -->
+    <div class="lucky-bottom">
+        <img class="activity-car" src="img/lucky-bottom.png" alt="">
+    </div>
+
+    <!-- 抽到奖励弹框 -->
+    <div class="lucky-win-prize none">
+        <!-- 更换文字 -->
+        <div class="winner-text">
+            <p class=""></p>
+        </div>
+        <!-- 更换奖品&&文字 -->
+        <div class="winner">
+            <span class=""></span>
+        </div>
+        <p class="win-prize"></p>
+        <!-- 更换按钮文字 -->
+        <div class="win-btn">
+            <p class="share-btn">立即领取</p>
+            <p class="again-btn none">再抽一次</p>
+        </div>
+        <!-- 关闭按钮 -->
+        <div class="">
+            <img class="close-layer" src="img/close.png">
+        </div>
+    </div>
+
+    <!-- 首次抽奖显示问答层 -->
+    <div class="question-layer none">
+        <div class="question-list">
+            <ul>
+                <li>
+                    <p class="tilte-color">1. 以下哪些选项符合汉腾品牌或汉腾X5车型描述？</p>
+                    <div class="answer-one choose-answer">
+                        <span class="only-choose flex5"><i class="choose-icon"></i>新世代品智SUV</span>
+                        <span class="only-choose flex5"><i class="choose-icon"></i>新梦想 新座驾</span>
+                        <span class="only-choose flex5"><i class="choose-icon"></i>看得见风景的车</span>
+                    </div>
+                </li>
+                <li>
+                    <p class="tilte-color">2.以下哪个选项是汉腾汽车车型？</p>
+                    <div class="answer-three choose-answer">
+                        <span class="only-choose"><i class="choose-icon"></i>TFT电子液晶仪表 Keyless enter无钥匙进入系统</span>
+                        <span class="only-choose"><i class="choose-icon"></i>9寸彩色中控屏／HUD抬头显示系统</span>
+                        <span class="only-choose"><i class="choose-icon"></i>ESP车身稳定控制系统／BOS刹车优先系统</span>
+                        <span class="only-choose"><i class="choose-icon"></i>悬浮式车顶／BLIS盲区监测并线辅助系统</span>
+                    </div>
+                </li>
+                <li>
+                    <p class="tilte-color">3.以下哪个选项符合汉腾汽车车型描述？</p>
+                    <div class="answer-three choose-answer">
+                        <span class="only-choose"><i class="choose-icon"></i>风尚版1.5L+5MT 59800</span>
+                        <span class="only-choose"><i class="choose-icon"></i>舒适版1.5L+5MT 65800</span>
+                        <span class="only-choose"><i class="choose-icon"></i>精英版1.5L+5MT 71800</span>
+                        <span class="only-choose"><i class="choose-icon"></i>精英版1.5T+CVT 85800</span>
+                        <span class="only-choose"><i class="choose-icon"></i>豪华版1.5T+CVT 92800</span>
+                        <span class="only-choose"><i class="choose-icon"></i>旗舰版1.5T+CVT 106800</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="question-btn">提&nbsp;&nbsp;&nbsp;交</div>
+        <div><img class="close-btn close-question" src="img/close.png"></div>
+    </div>
+
+    <!-- 提交用户信息 -->
+    <div class="user-info none">
+        <!-- 实物 -->
+        <div class="material-wrapper ">
+            <form action="">
+                <!-- 如果需要这个标题的话 -->
+                <div class="user-title">请填写您的信息</div>
+                <div class="material">
+                    <div class="mt10">
+                        <span>姓名：</span><input type="text">
+                    </div>
+                    <div class="mt10">
+                        <span>手机号：</span><input type="text">
+                    </div>
+                    <div class="mt10">
+                        <span>微信号：</span><input type="text">
+                    </div>
+                    <div class="mt10">
+                        <span>收货地址：</span><input type="text">
+                    </div>
+                </div>
+                <div class="submit">
+                    <input class="submit-btn" type="button" value="提交">
+                    <input class="submit-btn mr20" type="button" value="取消">
+                </div>
+            </form>
+            <!-- 关闭按钮 -->
+            <div class="">
+                <img class="close-layer close-btn" src="img/close.png">
+            </div>
+        </div>
+        <!-- 红包 -->
+        <div class="red-package none">
+            <form action="">
+                <!-- 如果需要这个标题的话 -->
+                <div class="user-title">请填写您的信息</div>
+                <div class="material">
+                    <div class="mt10">
+                        <span>姓名：</span><input type="text">
+                    </div>
+                    <div class="mt10">
+                        <span>手机号：</span><input type="text">
+                    </div>
+                    <div class="mt10">
+                        <span>所在城市：</span><input type="text">
+                    </div>
+                </div>
+                <div class="submit red-page">
+                    <input class="submit-btn" type="button" value="提交">
+                    <input class="submit-btn mr20" type="button" value="取消">
+                </div>
+            </form>
+            <!-- 关闭按钮 -->
+            <div class="">
+                <img class="close-layer close-btn" src="img/close.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- 二维码登录 -->
+    <div class="login-code pos-center none">
+        <div class="code-wrap">
+            <img src="img/code.png" alt="">
+            <p>扫码登录后</p>
+            <br>
+            <p>即可开始抽奖</p>
+        </div>
+        <!-- 关闭按钮 -->
+        <div class="">
+            <img class="close-layer close-btn" src="img/close.png">
+        </div>
+    </div>
+
+    <!-- layer -->
+    <div class="lucky-layer none"></div>
+
+</section>
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/lucky.js"></script>
+<script>
+    $(function () {
+        // rule
+        $('.activity-rule').on('click', function () {
+            $('.lucky-rotate-rule').show();
+            $('.lucky-layer').show();
+        });
+        $('.close-btn').on('click', function () {
+            $('.lucky-rotate-rule').hide();
+            $('.question-layer').hide();
+            $('.lucky-layer').hide();
+            $('.user-info').hide();
+            $('.login-code').hide();
+        });
+
+        // question
+        $('.choose-answer').on('click', '.only-choose', function () {
+            $(this).toggleClass('choose-bgc');
+        });
+
+        // 中奖滚动
+        var scroll = setInterval('autoScroll(".lucky-list-wrap")', 1000);
+        $(".lucky-list-wrap").hover(function () {
+            clearInterval(scroll);
+        }, function () {
+            scroll = setInterval('autoScroll(".lucky-list-wrap")', 1000);
+        });
+    });
+
+
+    function autoScroll(obj) {
+        $(obj).find("ul").animate({
+            marginTop: "-34px"
+        }, 1000, function () {
+            $(this).css({marginTop: "0px"}).find("li:first").appendTo(this);
+        })
+    }
+</script>
+
+</html>
